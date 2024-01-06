@@ -21,4 +21,7 @@ php artisan serve
 
 - Naviger vers la page /admin
 
-
+- Pour creer un utilisateur
+```bash
+php artisan make:filament-user
+```
