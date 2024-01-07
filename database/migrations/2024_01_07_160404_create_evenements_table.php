@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('antennes', function (Blueprint $table) {
+        Schema::create('evenements', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('address');
-            $table->string('latitude');
-            $table->string('longitude');
-            // $table->foreignId('responsable_id')->nullable()->constrained();
+            $table->string('nom');
+            $table->text('description');
+            $table->foreignId('antenne_id')->constrained('antennes')->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('antennes');
+        Schema::dropIfExists('evenements');
     }
 };
