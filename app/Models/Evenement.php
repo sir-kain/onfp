@@ -10,7 +10,7 @@ class Evenement extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nom', 'description', 'antenne_id'];
+    protected $fillable = ['nom', 'description', 'antenne_id', 'prenom','age'];
 
     public function antenne(): BelongsTo
     {
