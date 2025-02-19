@@ -26,7 +26,7 @@ class User extends Authenticatable implements HasName
         'password',
         'prenom',
         'telephone'
-        'adress',
+        
     ];
 
     /**
